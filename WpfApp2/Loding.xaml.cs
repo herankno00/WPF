@@ -37,23 +37,28 @@ namespace WpfApp2
                 tsq.Enqueue(TimeSpan.FromSeconds(i + 1));
             }
             sta();
-
-
         }
-        DoubleAnimation myDoubleAnimation = new DoubleAnimation();
+        DoubleAnimation myDoubleAnimation = new DoubleAnimation()
+        {
+            From = 1.00,
+            To = 360.00
+        };
 
         Queue<RotateTransform> rstq = new Queue<RotateTransform>();
         RotateTransform rst;
         TimeSpan ts;
         Queue<TimeSpan> tsq = new Queue<TimeSpan>();
-
+        RotateTransform rtf = new RotateTransform();
+        DoubleAnimation myDoubleAnimation2 = new DoubleAnimation()
+        {
+            From = 1.00,
+            To = 360.00,
+            Duration = new Duration(TimeSpan.FromSeconds(3.5))
+        };
 
 
         private void UserControl_MouseDown(object sender, MouseButtonEventArgs e)
         {
-
-
-
         }
         public void sta()
         {
@@ -61,27 +66,13 @@ namespace WpfApp2
             {
                 ts = tsq.Dequeue();
                 rst = rstq.Dequeue();
-
-
                 grids.Children[i].RenderTransform = rst;
-                myDoubleAnimation.From = 1.00;
-                myDoubleAnimation.To = 360.00;
                 myDoubleAnimation.Duration = new Duration(ts);
                 rst.BeginAnimation(RotateTransform.AngleProperty, myDoubleAnimation);
-
-
                 rstq.Enqueue(rst);
                 tsq.Enqueue(ts);
-
-
             }
-            RotateTransform rtf = new RotateTransform();
-            DoubleAnimation myDoubleAnimation2 = new DoubleAnimation();
-
             l9.RenderTransform = rtf;
-            myDoubleAnimation2.From = 1.00;
-            myDoubleAnimation2.To = 360.00;
-            myDoubleAnimation2.Duration = new Duration(TimeSpan.FromSeconds(3.5));
             myDoubleAnimation2.Completed += MyDoubleAnimation_Completed;
             rtf.BeginAnimation(RotateTransform.AngleProperty, myDoubleAnimation2);
         }
@@ -93,7 +84,7 @@ namespace WpfApp2
         private void MyDoubleAnimation_Completed(object sender, EventArgs e)
         {
             sta();
-            
+
 
         }
     }
