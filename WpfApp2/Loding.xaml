@@ -1,0 +1,97 @@
+﻿<UserControl x:Class="WpfApp2.Loding"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:WpfApp2"
+             mc:Ignorable="d"  
+              Height="100"  Initialized="UserControl_Initialized" Width="100" MouseDown="UserControl_MouseDown">
+    <Viewbox>
+    <Grid x:Name="grids">
+       
+            <Border Name="l0" BorderBrush="red" Width="14" Height="40"  Margin="43,10,43,50" RenderTransformOrigin="0.5,1"  >
+                <Border.RenderTransform>
+                    <TransformGroup>
+                        <TranslateTransform X="-0.349048" Y="-0.003046"/>
+                    </TransformGroup>
+                </Border.RenderTransform>
+                <Border CornerRadius="10000" Margin="0,0,0,26" Background="Cyan"></Border>
+            </Border>
+            <Border Name="l1" BorderBrush="red" Width="14" Height="40"  Margin="43,10,43,50" RenderTransformOrigin="0.5,1"  >
+                <Border.RenderTransform>
+                    <TransformGroup>
+                        <TranslateTransform X="-0.349048" Y="-0.003046"/>
+                    </TransformGroup>
+                </Border.RenderTransform>
+                <Border CornerRadius="10000" Margin="0,0,0,26" Background="Cyan"></Border>
+            </Border>
+            <Border Name="l2" BorderBrush="red" Width="14" Height="40"  Margin="43,10,43,50" RenderTransformOrigin="0.5,1"  >
+                <Border.RenderTransform>
+                    <TransformGroup>
+                        <TranslateTransform X="-0.349048" Y="-0.003046"/>
+                    </TransformGroup>
+                </Border.RenderTransform>
+                <Border CornerRadius="10000" Margin="0,0,0,26" Background="Cyan"></Border>
+            </Border>
+            <Border Name="l3" BorderBrush="red" Width="14" Height="40"  Margin="43,10,43,50" RenderTransformOrigin="0.5,1"  >
+                <Border.RenderTransform>
+                    <TransformGroup>
+                        <TranslateTransform X="-0.349048" Y="-0.003046"/>
+                    </TransformGroup>
+                </Border.RenderTransform>
+                <Border CornerRadius="10000" Margin="0,0,0,26" Background="Cyan"></Border>
+            </Border>
+            <Border Name="l4" BorderBrush="red" Width="14" Height="40"  Margin="43,10,43,50" RenderTransformOrigin="0.5,1"  >
+                <Border.RenderTransform>
+                    <TransformGroup>
+                        <TranslateTransform X="-0.349048" Y="-0.003046"/>
+                    </TransformGroup>
+                </Border.RenderTransform>
+                <Border CornerRadius="10000" Margin="0,0,0,26" Background="Cyan"></Border>
+            </Border>
+            <Border Name="l5" BorderBrush="red" Width="14" Height="40"  Margin="43,10,43,50" RenderTransformOrigin="0.5,1"  >
+                <Border.RenderTransform>
+                    <TransformGroup>
+                        <TranslateTransform X="-0.349048" Y="-0.003046"/>
+                    </TransformGroup>
+                </Border.RenderTransform>
+                <Border CornerRadius="10000" Margin="0,0,0,26" Background="Cyan"></Border>
+            </Border>
+            <Border Name="l6" BorderBrush="red" Width="14" Height="40"  Margin="43,10,43,50" RenderTransformOrigin="0.5,1"  >
+            <Border.RenderTransform>
+                <TransformGroup>
+                    <TranslateTransform X="-0.349048" Y="-0.003046"/>
+                </TransformGroup>
+            </Border.RenderTransform>
+            <Border CornerRadius="10000" Margin="0,0,0,26" Background="Cyan"></Border>
+        </Border>
+            <Border Name="l7" BorderBrush="red" Width="14" Height="40"  Margin="43,10,43,50" RenderTransformOrigin="0.5,1"  >
+                <Border.RenderTransform>
+                    <TransformGroup>
+                        <TranslateTransform X="-0.349048" Y="-0.003046"/>
+                    </TransformGroup>
+                </Border.RenderTransform>
+                <Border CornerRadius="10000" Margin="0,0,0,26" Background="Cyan"></Border>
+            </Border>
+            <Border Name="l8" BorderBrush="red" Width="14" Height="40"  Margin="43,10,43,50" RenderTransformOrigin="0.5,1"  >
+                <Border.RenderTransform>
+                    <TransformGroup>
+                        <TranslateTransform X="-0.349048" Y="-0.003046"/>
+                    </TransformGroup>
+                </Border.RenderTransform>
+                <Border CornerRadius="10000" Margin="0,0,0,26" Background="Cyan"></Border>
+            </Border>
+        
+            <Border Name="l9" BorderBrush="red" Width="14" Height="40"  Margin="43,10,43,50" RenderTransformOrigin="0.5,1"  >
+                <Border.RenderTransform>
+                    <TransformGroup>
+                        <TranslateTransform X="-0.349048" Y="-0.003046"/>
+                    </TransformGroup>
+                </Border.RenderTransform>
+                <Border CornerRadius="10000" Margin="0,0,0,26" Background="Cyan"></Border>
+            </Border>
+
+
+        </Grid>
+    </Viewbox>
+</UserControl>
