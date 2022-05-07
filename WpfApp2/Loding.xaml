@@ -7,16 +7,8 @@
              mc:Ignorable="d"  
               Height="100"  Initialized="UserControl_Initialized" Width="100" MouseDown="UserControl_MouseDown">
     <Viewbox>
-    <Grid x:Name="grids">
-       
-            <Border Name="l0" BorderBrush="red" Width="14" Height="40"  Margin="43,10,43,50" RenderTransformOrigin="0.5,1"  >
-                <Border.RenderTransform>
-                    <TransformGroup>
-                        <TranslateTransform X="-0.349048" Y="-0.003046"/>
-                    </TransformGroup>
-                </Border.RenderTransform>
-                <Border CornerRadius="10000" Margin="0,0,0,26" Background="Cyan"></Border>
-            </Border>
+    <Grid x:Name="grids" >
+            <Border Name="sign"  BorderBrush="Cyan" BorderThickness="2"></Border>
             <Border Name="l1" BorderBrush="red" Width="14" Height="40"  Margin="43,10,43,50" RenderTransformOrigin="0.5,1"  >
                 <Border.RenderTransform>
                     <TransformGroup>
@@ -81,7 +73,6 @@
                 </Border.RenderTransform>
                 <Border CornerRadius="10000" Margin="0,0,0,26" Background="Cyan"></Border>
             </Border>
-        
             <Border Name="l9" BorderBrush="red" Width="14" Height="40"  Margin="43,10,43,50" RenderTransformOrigin="0.5,1"  >
                 <Border.RenderTransform>
                     <TransformGroup>
@@ -90,8 +81,6 @@
                 </Border.RenderTransform>
                 <Border CornerRadius="10000" Margin="0,0,0,26" Background="Cyan"></Border>
             </Border>
-
-
         </Grid>
     </Viewbox>
 </UserControl>

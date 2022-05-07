@@ -25,17 +25,19 @@ namespace WpfApp2
         {
             InitializeComponent();
 
-
+            sign.BorderBrush = Brushes.Transparent;
         }
         EventArgs Events = null;
         private void UserControl_Initialized(object sender, EventArgs e)
         {
             Events = e;
-            for (double i = 0; i < 1.6; i+=0.2)
+            for (double i = 0; i < 2.4; i += 0.3)
             {
                 rstq.Enqueue(new RotateTransform());
-                tsq.Enqueue(TimeSpan.FromSeconds(i+1));
+                tsq.Enqueue(TimeSpan.FromSeconds(i + 1));
             }
+            sta();
+
 
         }
         DoubleAnimation myDoubleAnimation = new DoubleAnimation();
@@ -49,45 +51,12 @@ namespace WpfApp2
 
         private void UserControl_MouseDown(object sender, MouseButtonEventArgs e)
         {
-         
-            for (int i =1; i < 9; i++)
-            {
-                ts = tsq.Dequeue();
-                rst = rstq.Dequeue();
 
 
-                grids.Children[i].RenderTransform = rst;
-                myDoubleAnimation.From = 1.00;
-                myDoubleAnimation.To = 360.00;
-                myDoubleAnimation.Duration = new Duration(ts);
-                rst.BeginAnimation(RotateTransform.AngleProperty, myDoubleAnimation);
-
-
-                rstq.Enqueue(rst);
-                tsq.Enqueue(ts);
-
-
-            }
-            RotateTransform rtf = new RotateTransform();
-            DoubleAnimation myDoubleAnimation2 = new DoubleAnimation();
-
-            l9.RenderTransform = rtf;
-            myDoubleAnimation2.From = 1.00;
-            myDoubleAnimation2.To = 360.00;
-            myDoubleAnimation2.Duration = new Duration(TimeSpan.FromSeconds(2.8));
-            myDoubleAnimation2.Completed += MyDoubleAnimation_Completed;
-            rtf.BeginAnimation(RotateTransform.AngleProperty, myDoubleAnimation2);
 
         }
-
-        private void MyDoubleAnimation_Completed1(object sender, EventArgs e)
+        public void sta()
         {
-            throw new NotImplementedException();
-        }
-
-        private void MyDoubleAnimation_Completed(object sender, EventArgs e)
-        {
-
             for (int i = 1; i < 9; i++)
             {
                 ts = tsq.Dequeue();
@@ -112,9 +81,19 @@ namespace WpfApp2
             l9.RenderTransform = rtf;
             myDoubleAnimation2.From = 1.00;
             myDoubleAnimation2.To = 360.00;
-            myDoubleAnimation2.Duration = new Duration(TimeSpan.FromSeconds(2.8));
+            myDoubleAnimation2.Duration = new Duration(TimeSpan.FromSeconds(3.5));
             myDoubleAnimation2.Completed += MyDoubleAnimation_Completed;
             rtf.BeginAnimation(RotateTransform.AngleProperty, myDoubleAnimation2);
+        }
+        private void MyDoubleAnimation_Completed1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void MyDoubleAnimation_Completed(object sender, EventArgs e)
+        {
+            sta();
+            
 
         }
     }
